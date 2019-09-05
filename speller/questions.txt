@@ -1,0 +1,23 @@
+0.  Pneumonocultramicroscopicsilocovolcaniconiosis is another name for silocosis, a disease resulting from exposure to silica dust.
+
+1.  getrusage() returns resource usage statistics.
+
+2.  struct rusage has 16 variable members.
+
+3.      We pass before and after by reference instead of by value because it is both quicker and cheaper
+    to point to the structs than it is to recreate them.
+    
+4.    Main goes about reading words from a file by checking to see if the file opened correctly and 
+    entering a for loop that begins at the first character pointed to by fp, increments it by one character, 
+    and stops at the EOF marker. First, it stores the character in variable "c" and checks to see if the character is alphabetical, 
+    or an apostraphe that is not at the start of the word, if so, it adds the character to the word array at index location, and 
+    increments the index counter. The loop then checks if the word is too long, and if so, returns 0 and prepares to read a new word.
+    If the character is a digit, the loop restarts and prepares for a new word. If the for loop does not encounter an alphabetic or 
+    digit character, and index is greater than 0, then that means that the loop has found a whole word. It then adds the null 
+    terminator and increments the word counter. Finally, the loop benchmarks the time taken to check the accuracy of the spelling of
+    the word, updates the benchmark,  prints the word if misspelled, and increments the misspelling counter.
+
+5.      We use fgetc instead of fscanf because fgetc reads one character at a time,  whereas fscanf reads everything until it encounters 
+    whitespace, which could lead to the function saving unwanted information like punctuation.
+    
+6.  The parameters to check and load are declared as const to prevent any changes being made to the characters pointed to.
